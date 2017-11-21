@@ -183,57 +183,56 @@
       // Chosen CSS
         $("body").on("click","#submit",function(){
                     event.preventDefault();
-            var friends = {
+            var newfriend = {
           name : $("#name").val().trim(),
           photo : $("#photo").val().trim(),
-          scores:[
-                  $("#q1").val(),
-                  $("#q2").val(),
-                  $("#q3").val(),
-                  $("#q4").val(),
-                  $("#q5").val(),
-                  $("#q6").val(),
-                  $("#q7").val(),
-                  $("#q8").val(),
-                  $("#q9").val(),
-                  $("#q10").val()
-          ]
-};
-          console.log(friends);
+          scores : [
+                  $("#q1").val().trim(),
+                  $("#q2").val().trim(),
+                  $("#q3").val().trim(),
+                  $("#q4").val().trim(),
+                  $("#q5").val().trim(),
+                  $("#q6").val().trim(),
+                  $("#q7").val().trim(),
+                  $("#q8").val().trim(),
+                  $("#q9").val().trim(),
+                  $("#q10").val().trim()
+          ]}        //console.log(JSON.parse(newfriend));
+          console.log(newfriend);
+          //var friendBody= JSON.parse(newfriend);
 
-            $.post("/api/friends", friends,
-        function(data) {
+            $.post("/api/friends",newfriend,function(data) {
 
           // If a table is available... tell user they are booked.
-          if (data) {
-            r
+           if (data) {
+            
               console.log("successful post");
-            $('#myModal').modal("show");
-            alert("Yay! You are officially booked!");
-          }
+          //   //$('#myModal').modal("show");
+          //   alert("Yay! You are officially booked!");
+         }
 
-          // If a table is available... tell user they on the waiting list.
+          // // If a table is available... tell user they on the waiting list.
           else {
-            alert("Sorry you are on the wait list");
+           alert("Sorry you are on the wait list");
           }
           });
           // Clear the form when submitting
-          $("#name").val("");
-          $("#photo").val("");
-          $("#q1").val("");
-          $("#q2").val("");
-          $("#q3").val("");
-          $("#q4").val("");
-          $("#q5").val("");
-          $("#q6").val("");
-          $("#q7").val("");
-          $("#q8").val("");
-          $("#q9").val("");
-          $("#q10").val("");
+          // $("#name").val("");
+          // $("#photo").val("");
+          // $("#q1").val("");
+          // $("#q2").val("");
+          // $("#q3").val("");
+          // $("#q4").val("");
+          // $("#q5").val("");
+          // $("#q6").val("");
+          // $("#q7").val("");
+          // $("#q8").val("");
+          // $("#q9").val("");
+          // $("#q10").val("");
 
         
             
-        })
+        });
 
 
   </script>

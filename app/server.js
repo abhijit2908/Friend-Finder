@@ -8,9 +8,9 @@ var PORT = process.env.PORT || 3000;
 require("./routing/apiRoutes.js")(app);
 require("./routing/htmlRoutes.js")(app);
 
-app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
-
+//app.use(bodyParser.text());
 
 
 app.listen(PORT,function(){
