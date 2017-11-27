@@ -3,8 +3,7 @@ var path = require("path");
 var bodyParser = require ('body-parser');
 
 module.exports = function(app){
-//app.use(bodyParser.urlencoded({ extended: true }));
-//app.use(bodyParser.json());
+
 
 	app.get("/api/friends",function(req,res){
 		res.json(friends);
@@ -13,11 +12,9 @@ module.exports = function(app){
 	app.post("/api/friends",function(req,res){
 			var friendBody = req.body;
 		friends.push(friendBody);
-		//res.json(req.body);
-		//console.log(JSON.stringify(req.body));
+	
 		console.log(friendBody);
-		//res.json(friends);
-		//res.json();
+	
 
 		var friendsScoreDiff = [];
 

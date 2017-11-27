@@ -12,7 +12,6 @@ require("./app/routing/apiRoutes.js")(app);
 require("./app/routing/htmlRoutes.js")(app);
 
 
-//app.use(bodyParser.text());
 
 
 app.listen(PORT,function(){
