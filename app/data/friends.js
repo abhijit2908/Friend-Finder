@@ -2,7 +2,7 @@
 var friends = [
 {
 	"name":"indira",
-  "photo":"https://media.licdn.com/mpr/mpr/shrinknp_400_400/p/6/005/064/1bd/3435aa3.jpg",
+  "photo":"https://i.pinimg.com/736x/9e/6a/78/9e6a786abea31b3b1ba66cd878628910--john-snow-game-of-thrones-jon-schnee.jpg",
   "scores":[
       5,
       1,
@@ -18,7 +18,7 @@ var friends = [
 },
 {
 	"name":"Ravi",
-  "photo":"https://media.licdn.com/mpr/mpr/shrinknp_400_400/p/6/005/064/1bd/3435aa3.jpg",
+  "photo":"https://upload.wikimedia.org/wikipedia/en/9/94/Cersei_Lannister-Lena_Headey.jpg",
   "scores":[
       2,
       5,
@@ -34,7 +34,7 @@ var friends = [
 },
 {
 	"name":"sundar",
-  "photo":"https://media.licdn.com/mpr/mpr/shrinknp_400_400/p/6/005/064/1bd/3435aa3.jpg",
+  "photo":"http://s1.r29static.com//bin/entry/9be/x,80/1824829/image.jpg",
   "scores":[
       5,
       4,
@@ -50,7 +50,7 @@ var friends = [
 },
 {
 	"name":"satya",
-  "photo":"https://media.licdn.com/mpr/mpr/shrinknp_400_400/p/6/005/064/1bd/3435aa3.jpg",
+  "photo":"https://www.nerdmuch.com/wp-content/uploads/2016/07/arya-kills-cersei.jpg",
   "scores":[
       3,
       4,
@@ -66,7 +66,7 @@ var friends = [
 },
 {
 	"name":"shivam",
-  "photo":"https://media.licdn.com/mpr/mpr/shrinknp_400_400/p/6/005/064/1bd/3435aa3.jpg",
+  "photo":"https://img00.deviantart.net/db1c/i/2016/237/6/a/tyrion_lannister___peter_dinklage_by_tomatosoup13-daeahx5.jpg",
   "scores":[
       2,
       4,

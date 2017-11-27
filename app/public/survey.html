@@ -163,6 +163,8 @@
           </footer>
 
       </div>
+
+      <!--Modal-->
       <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
   <div class="modal-dialog" role="document">
       <div class="modal-content">
@@ -171,7 +173,8 @@
             <h4 class="modal-title" id="myModalLabel">Best Match</h4>
           </div>
           <div class="modal-body">
-            friends
+            <img id="friendphoto" width="200" src="">
+           <div id = "friendname"></div>
           </div>
           <div class="modal-footer">
             <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
@@ -187,48 +190,66 @@
           name : $("#name").val().trim(),
           photo : $("#photo").val().trim(),
           scores : [
-                  $("#q1").val().trim(),
-                  $("#q2").val().trim(),
-                  $("#q3").val().trim(),
-                  $("#q4").val().trim(),
-                  $("#q5").val().trim(),
-                  $("#q6").val().trim(),
-                  $("#q7").val().trim(),
-                  $("#q8").val().trim(),
-                  $("#q9").val().trim(),
-                  $("#q10").val().trim()
+                  $("#q1").val(),
+                  $("#q2").val(),
+                  $("#q3").val(),
+                  $("#q4").val(),
+                  $("#q5").val(),
+                  $("#q6").val(),
+                  $("#q7").val(),
+                  $("#q8").val(),
+                  $("#q9").val(),
+                  $("#q10").val()
           ]}        //console.log(JSON.parse(newfriend));
           console.log(newfriend);
           //var friendBody= JSON.parse(newfriend);
+          var scoreCheck = function(){
+            for (var i = 0; i < 10; i++) {
+              if(newfriend.scores[i] === null){
+                console.log("question unasnwered " + i);
+                return false;
+              }
+            }
+            return true;
+          }
 
-            $.post("/api/friends",newfriend,function(data) {
+          if(newfriend.name === '' || newfriend.photo === '' || !scoreCheck()){
+              alert(" Please fill out all the required fields and survey qustions. ")
+          }
+          else{
+
+
+          $.post("/api/friends",newfriend,function(data){
 
           // If a table is available... tell user they are booked.
            if (data) {
             
-              console.log("successful post");
-          //   //$('#myModal').modal("show");
+              //console.log("successful post");
+              $('#friendname').html(data.bffName);
+              $('#friendphoto').attr("src",data.bffPhoto);
+            $('#myModal').modal("show");
           //   alert("Yay! You are officially booked!");
-         }
+                      }
 
           // // If a table is available... tell user they on the waiting list.
           else {
-           alert("Sorry you are on the wait list");
+           alert("Sorry we could not process your request");
+                }
+            });
           }
-          });
           // Clear the form when submitting
-          // $("#name").val("");
-          // $("#photo").val("");
-          // $("#q1").val("");
-          // $("#q2").val("");
-          // $("#q3").val("");
-          // $("#q4").val("");
-          // $("#q5").val("");
-          // $("#q6").val("");
-          // $("#q7").val("");
-          // $("#q8").val("");
-          // $("#q9").val("");
-          // $("#q10").val("");
+          $("#name").val("");
+          $("#photo").val("");
+          $("#q1").val("");
+          $("#q2").val("");
+          $("#q3").val("");
+          $("#q4").val("");
+          $("#q5").val("");
+          $("#q6").val("");
+          $("#q7").val("");
+          $("#q8").val("");
+          $("#q9").val("");
+          $("#q10").val("");
 
         
             
