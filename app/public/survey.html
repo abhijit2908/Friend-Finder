@@ -201,12 +201,12 @@
                   $("#q9").val(),
                   $("#q10").val()
           ]}        //console.log(JSON.parse(newfriend));
-          console.log(newfriend);
+          //console.log(newfriend);
           //var friendBody= JSON.parse(newfriend);
           var scoreCheck = function(){
             for (var i = 0; i < 10; i++) {
               if(newfriend.scores[i] === null){
-                console.log("question unasnwered " + i);
+                alert("You have not answered following question " + i);
                 return false;
               }
             }
@@ -214,7 +214,7 @@
           }
 
           if(newfriend.name === '' || newfriend.photo === '' || !scoreCheck()){
-              alert(" Please fill out all the required fields and survey qustions. ")
+              alert(" Please fill out all the required fields and survey questions. ")
           }
           else{
 
@@ -227,7 +227,7 @@
               //console.log("successful post");
               $('#friendname').html(data.bffName);
               $('#friendphoto').attr("src",data.bffPhoto);
-            $('#myModal').modal("show");
+              $('#myModal').modal("show");
           //   alert("Yay! You are officially booked!");
                       }
 
