@@ -1,6 +1,6 @@
 # Friend-Finder
 
-Friend Finder is an App that allows user to answer a bunch of Questions and find there perfect match for a friend. 
+Friend Finder is an App that allows user to answer a bunch of Questions and find their perfect match for a friend. 
 
 My App is themed to finding the best movie villain friend for the user.
 
